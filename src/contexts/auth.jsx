@@ -28,6 +28,12 @@ export const AuthProvider = ({ children }) => {
     navidate("/"); // Redirecionar após o login
   };
 
+
+  const log_in = (name, email, password) => {
+    console.log("log_in auth", { name, email, password });
+  }
+
+
   const logout = () => {
     console.log("logout");
     setUser(null); // seta o usuário como null
@@ -36,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ authenticated: Boolean(user), user, loading, login, logout }}
+      value={{ authenticated: Boolean(user), user, loading, login, log_in, logout }}
     >
       {children}
     </AuthContext.Provider>
