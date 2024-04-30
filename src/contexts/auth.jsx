@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
-    console.log("login auth", { email, password });
+    console.log("login auth");
     setUser(email);
 
     // Salvar o email e a senha no localStorage
