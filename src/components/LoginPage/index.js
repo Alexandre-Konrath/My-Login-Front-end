@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect  } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useContext  } from "react";
+import { NavLink } from 'react-router-dom'
 
 import { AuthContext } from "../../contexts/auth";
 import api from "../../services/api";
@@ -24,10 +24,7 @@ export default function LoginPage() {
       });
       // chama o login
       await login(email, password);
-      // if(response) {
-      //   // se o response existe, ele vai para a pagina home
-      //   navidate("/")
-      // }
+
     } catch (error) {
       console.error("Erro de autenticação:", error);
       alert("Email ou senha incorretos")
@@ -46,6 +43,7 @@ export default function LoginPage() {
             type="email"
             id="email"
             value={email}
+            placeholder="Digite seu email"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -57,13 +55,19 @@ export default function LoginPage() {
             type="password"
             id="password"
             value={password}
+
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
 
         <div className="btn-action">
-          <button type="submit">Enviar</button>
+          <button type="submit">Entrar</button>
+
+          <button>
+            <NavLink to='/log_in'>Faça seu login</NavLink>
+          </button>
+
         </div>
       </form>
     </div>
