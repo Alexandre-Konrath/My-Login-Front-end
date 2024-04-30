@@ -1,6 +1,7 @@
-import React, { useState, useContext  } from "react";
-import { NavLink } from 'react-router-dom'
+import React, { useState, useContext } from "react";
+import { NavLink } from 'react-router-dom';
 
+import mensagem from '../Mensagem/index'
 import { AuthContext } from "../../contexts/auth";
 import api from "../../services/api";
 import './style.css'
@@ -11,11 +12,10 @@ export default function LoginPage() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // navegação
-  // const navidate = useNavigate()
 
   async function handleLogin(e) {
     e.preventDefault();
+
     try {
       // consulta a api se o email e o password existem
       const response = await api.post("/login", {
@@ -27,12 +27,14 @@ export default function LoginPage() {
 
     } catch (error) {
       console.error("Erro de autenticação:", error);
-      alert("Email ou senha incorretos")
+      console.log("Email ou senha incorretos");
+      mensagem("Email ou senha incorretos", "red")
     }
   }
 
   return (
     <div id="login" className="container">
+        <div class="container-mensagem hidden toast" id="container_mensagem"></div>
       <h1>Login do Sistema</h1>
       {/* chama o authenticated */}
       <p>{String(authenticated)}</p>

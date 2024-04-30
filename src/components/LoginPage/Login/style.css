@@ -46,3 +46,8 @@
   text-decoration: none;
   color: #fff;
 }
+
+.setError {
+  text-align: center;
+  color: #ff2d2d;
+}
