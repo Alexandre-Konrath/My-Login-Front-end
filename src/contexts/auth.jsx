@@ -1,6 +1,8 @@
 import React, { useState, createContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import mensagem from "../components/Mensagem";
+
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -29,8 +31,10 @@ export const AuthProvider = ({ children }) => {
   };
 
 
-  const log_in = (name, email, password) => {
-    console.log("log_in auth", { name, email, password });
+  const signUp = (name, email, password) => {
+    console.log("signUp auth", { name, email, password });
+    mensagem("Conta criada com sucesso", "blue")
+    navidate("/");
   }
 
 
@@ -42,7 +46,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ authenticated: Boolean(user), user, loading, login, log_in, logout }}
+      value={{ authenticated: Boolean(user), user, loading, login, signUp, logout }}
     >
       {children}
     </AuthContext.Provider>
