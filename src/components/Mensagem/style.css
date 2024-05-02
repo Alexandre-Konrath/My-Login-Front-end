@@ -1,0 +1,28 @@
+.hidden {
+  display: none;
+}
+.container-mensagem {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+  color: white;
+}
+
+.toast {
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.red {
+  background-color: #ff5050;
+}
+
+.green {
+  background-color: #96ff6c;
+}
+.blue {
+  background-color: #206eff;
+}
