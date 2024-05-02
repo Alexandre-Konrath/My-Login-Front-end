@@ -7,9 +7,9 @@ import {
   Navigate
 } from "react-router-dom";
 
-import LoginPage from "./components/LoginPage";
-import HomePage from "./components/HomePage";
-import Log_in from "./components/LoginPage/Login"
+import Log_in from "./page/LoginPage/Login";
+import LoginPage from "./page/LoginPage";
+import HomePage from "./page/HomePage";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
