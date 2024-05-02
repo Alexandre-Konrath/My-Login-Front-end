@@ -10,3 +10,35 @@ html, body {
 *::after {
   box-sizing: inherit;
 }
+
+:root {
+  --background: #141414;
+  --backgrond-login: #FFECCD;
+  --primary: #FFBF00;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--backgrond-login);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--primary);
+}
+
+/* Estilo para campos preenchidos automaticamente */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffde7a inset !important; /* Defina a cor do fundo aqui */
+}
