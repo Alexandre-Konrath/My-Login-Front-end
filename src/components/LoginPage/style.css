@@ -1,0 +1,172 @@
+.container-login {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.container-login img {
+  width: 20rem;
+}
+
+.container-login h1 {
+  color: var(--background);
+  font-size: 3rem;
+}
+
+.form-login {
+  width: 80%;
+}
+
+.field {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.field label {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+
+  color: var(--background);
+}
+
+.field input {
+  border: none;
+  outline: none;
+
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+
+.bolinha-login {
+  width: 100%;
+  height: 25%;
+}
+
+.bolinha-login .bolinha{
+  position: absolute;
+  width: 21rem;
+  height: 19em;
+
+  right: -115px;
+  bottom: -150px;
+  border-radius: 50%;
+  z-index: 1;
+
+  background-color: var(--primary);
+}
+
+.bolinha-login .btn-action {
+  position: absolute;
+  right: 0px;
+  bottom: 15px;
+
+  z-index: 2;
+}
+
+.bolinha-login .btn-action button {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 10px 20px;
+  font-size: 3rem;
+
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.pagina-sign-up p {
+  color: var(--background);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.pagina-sign-up a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--background);
+  font-size: 1rem;
+}
+
+.sign-up {
+  width: 35rem;
+  height: 100vh;
+
+  z-index: 100;
+
+  top: 0;
+  /* right: 0px; */
+  right: -570px;
+  border-radius: 20px 0px 0px 20px;
+  position: fixed;
+
+  background-color: var(--backgrond-login);
+
+  transition: right 0.5s ease-in-out;
+}
+.sign-up .fechar {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.sign-up .fechar svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+.sign-up.visible {
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+  display: none;
+}
+.container-mensagem {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+  color: white;
+}
+
+.toast {
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.red {
+  background-color: #ff5050;
+}
+.green {
+  background-color: #96ff6c;
+}
+.blue {
+  background-color: #206eff;
+}
