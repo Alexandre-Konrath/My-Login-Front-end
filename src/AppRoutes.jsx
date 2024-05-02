@@ -7,9 +7,9 @@ import {
   Navigate
 } from "react-router-dom";
 
-import Log_in from "./page/LoginPage/Login";
-import LoginPage from "./page/LoginPage";
-import HomePage from "./page/HomePage";
+import Main from "./page/main";
+import HomePage from "./components/HomePage";
+import LoginPage from "./components/LoginPage";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
@@ -35,8 +35,8 @@ const AppRoutes = () => {
     <Router>
     <AuthProvider>
         <Routes>
-          <Route exact path="/login" element={<LoginPage />}/>
-          <Route exact path="/log_in" element={<Log_in />}/>
+        <Route exact path="/teste" element={<LoginPage />}/>
+          <Route exact path="/login" element={<Main />}/>
           <Route exact path="/" element={<Private><HomePage /></Private>}/>
         </Routes>
       </AuthProvider>
