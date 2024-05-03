@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from "react";
 
 import { AuthContext } from "../../contexts/auth";
+
+import mensagem from "../Mensagem";
+
 import './style.css'
-import Mensagem from "../Mensagem";
 
 
 export default function HomePage() {
@@ -10,7 +12,6 @@ export default function HomePage() {
 
   useEffect(() => {
     if (authenticated && user) {
-      Mensagem(`Seja bem-vindo(a)!`, 'blue');
     }
   }, [authenticated, user]);
 
@@ -21,8 +22,10 @@ export default function HomePage() {
   return (
     <div className="container-home">
       <div class="container-mensagem hidden toast" id="container_mensagem"></div>
-      <h1>HomePage</h1>
+      <h1>Página de carrinho</h1>
       <p>{String(authenticated)}</p>
+      <a href="/">voltar para o cardapio</a>
+
       <button onClick={handleLogout}>Logout</button>
     </div>
   )
