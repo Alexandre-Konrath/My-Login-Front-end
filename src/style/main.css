@@ -1,0 +1,25 @@
+@import './configs/colors.css';
+@import './configs/webkit.css';
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button, a {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
