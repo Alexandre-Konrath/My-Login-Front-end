@@ -2,7 +2,7 @@ export function validatorName(name) {
   // Remova espaços em branco antes e depois do nome
   name = name.trim();
   // Regex para validar o nome
-  let namePattern = /^[A-Za-zÀ-ú\s]+$/;
+  let namePattern = /^[A-Z][a-zÀ-ú]*(?:\s(?:da|de|do|dos|das)\s[A-Z][a-zÀ-ú]*)*(?:\s[A-Z][a-zÀ-ú]*)*$/;
 
   return namePattern.test(name);
 }

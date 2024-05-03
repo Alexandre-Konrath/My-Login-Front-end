@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import { NavLink } from 'react-router-dom'
 
-import img2 from '../../../img/Mobile login-pana.svg'
-import { AuthContext } from "../../../contexts/auth";
 import { validatorName, validatorEmail, validatorPassword } from "./validarors";
+import { AuthContext } from "../../../contexts/auth";
+import img2 from '../../../img/Mobile login-pana.svg'
 import api from "../../../services/api";
+
 import './style.css'
 
 export default function SignUp() {
@@ -31,7 +31,10 @@ export default function SignUp() {
     }
 
     if (!validatorPassword(password)) {
-      setError("A senha deve ter no mínimo 6 caracteres, incluindo pelo menos 1 número e 1 caractere especial.");
+      setError(`
+      A senha deve ter no mínimo 6 caracteres.
+      Pelo menos 1 número.
+      Pelo menos 1 caractere especial (!, @, #, etc.).`);
       return;
     }
 

@@ -79,25 +79,31 @@ input::selection {
   border-radius: 50%;
   z-index: 1;
 
+  transition: transform 0.3s;
+
   background-color: var(--primary);
 }
+.bolinha-signup:hover {
+  transform: scale(1.1);
+}
 
-.bolinha-sign-up .btn-action-sign-up {
+.btn-action-sign-up {
   position: absolute;
-  right: 0px;
-  bottom: 15px;
+  right: 10px;
+  bottom: 20px;
 
   z-index: 2;
 }
 
-.bolinha-sign-up .btn-action-sign-up button {
+.btn-action-sign-up button {
   border: none;
   font-weight: bold;
   cursor: pointer;
 
-  padding: 10px 20px;
   font-size: 3rem;
 
   background-color: var(--primary);
   color: var(--background);
+
+  transition: transform 0.3s;
 }

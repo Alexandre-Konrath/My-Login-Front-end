@@ -6,7 +6,7 @@ import { AuthContext } from "../../contexts/auth";
 import img1 from '../../img/Login-rafiki.svg'
 import mensagem from '../../components/Mensagem'
 import api from "../../services/api";
-import '../../style/index.css'
+import '../../style/main.css'
 import './style.css'
 
 export default function LoginPage() {

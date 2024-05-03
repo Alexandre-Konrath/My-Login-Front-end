@@ -1,4 +1,4 @@
-export default function Mensagem(texto, cor) {
+export default function mensagem(texto, cor) {
   let container_mensagem = document.getElementById('container_mensagem');
   if (container_mensagem) {
     container_mensagem.textContent = texto;
