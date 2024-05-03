@@ -27,14 +27,15 @@ export const AuthProvider = ({ children }) => {
     // Salvar o email e a senha no localStorage
     localStorage.setItem("user", JSON.stringify({ email, password }))
 
-    navidate("/"); // Redirecionar após o login
+    mensagem(`Seja bem-vindo(a)!`, 'blue');
+    navidate("/carrinho"); // Redirecionar após o login
   };
 
 
   const signUp = (name, email, password) => {
     console.log("signUp auth", { name, email, password });
     mensagem("Conta criada com sucesso", "blue")
-    navidate("/");
+    navidate("/carrinho");
   }
 
 

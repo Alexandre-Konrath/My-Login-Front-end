@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 
+import mensagem from "./components/Mensagem/index";
 import {
   BrowserRouter as Router,
   Route,
@@ -9,7 +10,6 @@ import {
 
 import Main from "./page/main";
 import HomePage from "./components/HomePage";
-import LoginPage from "./components/LoginPage";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
@@ -25,7 +25,10 @@ const AppRoutes = () => {
 
     // se não estiver autenticado ele retorna insta para a '/login'
     if(!authenticated) {
-      return <Navigate to='/login'/>
+      mensagem('É precisso estar logado para acessar o carrinho', 'red')
+      return (
+        <Navigate to='/'/>
+      )
     }
 
     return children
@@ -33,11 +36,11 @@ const AppRoutes = () => {
 
   return (
     <Router>
+    <div className="container-mensagem hidden toast" id="container_mensagem"></div>
     <AuthProvider>
         <Routes>
-        <Route exact path="/teste" element={<LoginPage />}/>
-          <Route exact path="/login" element={<Main />}/>
-          <Route exact path="/" element={<Private><HomePage /></Private>}/>
+          <Route exact path="/" element={<Main />}/>
+          <Route exact path="/carrinho" element={<Private><HomePage /></Private>}/>
         </Routes>
       </AuthProvider>
     </Router>
