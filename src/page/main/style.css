@@ -4,7 +4,7 @@
 
 .container {
   width: 100%;
-  height: 220vh;
+  height: 210vh;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +20,15 @@
   display: flex;
   flex-direction: column;
 }
+.sec-inicio .inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec-inicio .inicio h1 {
+  color: var(--text);
+}
 .sec-inicio .header {
   width: 100%;
   height: 8rem;
@@ -29,13 +38,71 @@
   align-items: center;
 }
 .header .imagem img {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
 }
+.header .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .header .links a {
+  font-size: 1.2rem;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+  margin: 20px;
   cursor: pointer;
   color: white;
+} .header .links a:hover {
+  border-bottom: 1px solid var(--background-100);
 }
+.header .links .btn-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-left: 50px;
+
+  background-color: var(--text);
+  color: var(--background);
+  font-weight: bold;
+  transition: box-shadow 0.3s;
+} .header .links .btn-icon:hover {
+  box-shadow: 0px 1px 5px var(--text);
+}
+.header .links .btn-icon .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.header .links .btn-icon .icon .btn-quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  border-radius: 50%;
+  padding: 0px 4px;
+  top: -13px;
+  right: -36px;
+  background-color: var(--secondary);
+  color: var(--background);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.header .links .btn-icon .icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+}
+
+
  /* ------------------------------------------------------------- */
 .sec-cardapio {
   width: 100%;
@@ -43,16 +110,81 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-100);
 }
-
- /* ------------------------------------------------------------- */
-footer {
+.sec-cardapio .filtro-cardapio{
   width: 100%;
-  height: 20vh;
+  height: 10%;
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.sec-cardapio .filtro-cardapio .nav-filtro {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-cardapio .filtro-cardapio .nav-filtro .lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+
+}.sec-cardapio .filtro-cardapio .nav-filtro .lista li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 20px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+
+.sec-cardapio .container-cardapio{
+  width: 70%;
+  height: 76%;
+
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+
+  padding: 20px;
+}
+.sec-cardapio .container-cardapio .cardapio {
+  width: 16rem;
+  height: 20rem;
+  background-color: var(--secondary);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.btn-cardapio-vermais {
+  width: 100%;
+  height: 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+}
+.btn-cardapio-vermais button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--primary);
+  color: var(--backgrounds);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 
  /* ----------------------------------------- */
 .login {
