@@ -1,11 +1,14 @@
 import React, { useState, useContext } from "react";
 
-import SignUp from './Login/index'
-import { IoMdCloseCircleOutline } from "react-icons/io";
 import { AuthContext } from "../../contexts/auth";
-import img1 from '../../img/Login-rafiki.svg'
-import mensagem from '../../components/Mensagem'
 import api from "../../services/api";
+
+import mensagem from '../../components/Mensagem'
+import SignUp from './SignUp/index'
+
+import { IoMdCloseCircleOutline } from "react-icons/io";
+import img1 from '../../img/Login-rafiki.svg'
+
 import '../../style/main.css'
 import './style.css'
 

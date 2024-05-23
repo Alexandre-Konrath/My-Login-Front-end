@@ -3,7 +3,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--backgrond-login);
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
