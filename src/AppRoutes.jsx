@@ -8,8 +8,8 @@ import {
   Navigate
 } from "react-router-dom";
 
-import Main from "./page/main";
-import HomePage from "./components/HomePage";
+import Main from "./page/MainPage";
+import CartPage from "./page/CartPage";
 
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
@@ -24,8 +24,9 @@ const AppRoutes = () => {
     }
 
     // se não estiver autenticado ele retorna insta para a '/login'
-    if(!authenticated) {
+    if (<Navigate to='/carrinho'/> && !authenticated) {
       mensagem('É precisso estar logado para acessar o carrinho', 'red')
+
       return (
         <Navigate to='/'/>
       )
@@ -40,7 +41,7 @@ const AppRoutes = () => {
     <AuthProvider>
         <Routes>
           <Route exact path="/" element={<Main />}/>
-          <Route exact path="/carrinho" element={<Private><HomePage /></Private>}/>
+          <Route exact path="/carrinho" element={<Private><CartPage /></Private>}/>
         </Routes>
       </AuthProvider>
     </Router>

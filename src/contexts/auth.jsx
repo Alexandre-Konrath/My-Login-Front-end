@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
-    console.log("login auth");
+    // seto o valor de User para armazenar os dados e tornar true o authenticated
     setUser(email);
 
     // Salvar o email e a senha no localStorage
@@ -33,9 +33,13 @@ export const AuthProvider = ({ children }) => {
 
 
   const signUp = (name, email, password) => {
-    console.log("signUp auth", { name, email, password });
-    mensagem("Conta criada com sucesso", "blue")
-    navidate("/carrinho");
+    setUser(email);
+    console.log("conta criada com sucesso", { name, email, password });
+
+    localStorage.setItem("user", JSON.stringify({ email, password }))
+
+    mensagem(`Conta criada com sucesso!!!`, 'green');
+    navidate("/carrinho"); // Redirecionar após ter criado a conta
   }
 
 
