@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 
+import burguer from '../../img/burguer.png'
 import logo from '../../img/logo.png';
 
 import '../../style/main.css';
@@ -45,8 +46,8 @@ export default function Main() {
             <img src={logo} alt="Logo" />
           </div>
           <div className='links'>
-            <a>Cardápio</a>
-            <a>Depoimentos</a>
+            <a className='a-link' href='#nav-carrinho'>Cardápio</a>
+            <a className='a-link' href='#nav-depoimento'>Depoimentos</a>
             {showLogoutConfirmation && (
               <div className='confirmation'>
                 <p>Tem certeza que deseja sair da conta?</p>
@@ -56,8 +57,8 @@ export default function Main() {
                 </div>
               </div>
             )}
-            <a className={getClassName(authenticated, true)} onClick={handleLoginClick}>Login</a>
-            <a className={getClassName(authenticated, false)} onClick={handleLogoutClick}>Logout</a>
+            <a className={`${getClassName(authenticated, true)} a-link`} onClick={handleLoginClick}>Login</a>
+            <a className={`${getClassName(authenticated, false)} a-link`} onClick={handleLogoutClick}>Logout</a>
             <a href='/carrinho' className='btn-icon'>
               Meu Carrinho
               <span className='icon'>
@@ -78,7 +79,7 @@ export default function Main() {
         <a className='fechar' id='login' onClick={handleHideLoginClick}><IoMdCloseCircleOutline /></a>
       </section>
 
-      <section className='sec-cardapio'>
+      <section id='nav-carrinho' className='sec-cardapio'>
         <div className='filtro-cardapio'>
           <nav className='nav-filtro'>
             <ul className='lista'>
@@ -91,11 +92,40 @@ export default function Main() {
         </div>
 
         <div className='container-cardapio'>
-          {/* Conteúdo do cardápio */}
+        <div className='cardapio'>
+          <div className='img-cardapio'>
+            <img src={burguer}/>
+          </div>
+          <div className='descricao-cardapio'>
+            <div className='text-descricao'>
+              <h3>Nome do Lanche</h3>
+              <h3>R$32,00</h3>
+            </div>
+            <div className='btn-descricao'>
+              <button>-</button>
+              <span>2</span>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
+        <div className='cardapio'></div>
         </div>
         <div className='btn-cardapio-vermais'>
           <button>Ver mais</button>
         </div>
+      </section>
+
+      <section id='nav-depoimento' className='sec-depoimento'>
+        <div className='img-depoimento'></div>
+        <div className='container-depoimento'></div>
       </section>
 
       <Footer />

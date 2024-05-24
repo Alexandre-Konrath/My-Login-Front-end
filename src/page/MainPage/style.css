@@ -5,10 +5,9 @@
   display: flex;
 }
 
-
 .container {
   width: 100%;
-  height: 210vh;
+  height: 280vh;
 
   display: flex;
   flex-direction: column;
@@ -53,15 +52,37 @@
 }
 
 .header .links a {
-  font-size: 1.2rem;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.3s;
-  margin: 20px;
   cursor: pointer;
+  position: relative; /* Para posicionar o pseudoelemento corretamente */
+
+  margin: 20px;
+  font-size: 1.2rem;
+
   color: white;
-} .header .links a:hover {
-  border-bottom: 1px solid var(--background-100);
 }
+
+.header .links .a-link::before {
+  content: "";
+
+  width: 0;
+  height: 3px; /* A altura da borda */
+
+  position: absolute;
+
+  bottom: -5px;
+  left: 0;
+  border-radius: 10px;
+
+  background-color: var(--background-200); /* Cor da borda */
+  transition: width 0.3s; /* Transição apenas para a largura */
+}
+
+.header .links .a-link:hover::before {
+  width: 100%; /* Ajuste da largura para 100% ao passar o mouse */
+}
+
+
+
 .header .links .btn-icon{
   display: flex;
   flex-direction: row;
@@ -142,7 +163,7 @@
   list-style-type: none;
 
 }.sec-cardapio .filtro-cardapio .nav-filtro .lista li {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin: 20px;
   color: var(--text);
@@ -165,10 +186,48 @@
 .sec-cardapio .container-cardapio .cardapio {
   width: 16rem;
   height: 20rem;
-  background-color: var(--secondary);
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   border-radius: 20px;
   margin: 10px;
+
+  background-color: var(--secondary);
 }
+.cardapio .img-cardapio img {
+  width: 14rem;
+  height: 12rem;
+
+  border-radius: 20px;
+
+  background-color: var(--backgrond-login);
+}
+.cardapio .descricao-cardapio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardapio .descricao-cardapio .text-descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardapio .descricao-cardapio .text-descricao h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 5px;
+}
+.cardapio .descricao-cardapio .btn-descricao button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 0px 15px
+}
+
 
 .btn-cardapio-vermais {
   width: 100%;
@@ -188,6 +247,19 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+
+
+
+.sec-depoimento {
+  width: 100%;
+  height: 70vh;
+  background-color: var(--backgrond-login);
+}
+
+
+
+
 
 
  /* ----------------------------------------- */

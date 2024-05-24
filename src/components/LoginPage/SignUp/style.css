@@ -33,7 +33,7 @@
 }
 .field-sign-up input {
   border: none;
-  outline: none;
+  outline:none;
 
   font-size: 1.2rem;
   padding: 5px 10px;
@@ -44,22 +44,15 @@
   color: var(--background);
 }
 input::selection {
-  background-color: transparent; /* Define a cor de fundo da seleção como transparente */
+  background-color: var(--backgrond-login); /* Define a cor de fundo da seleção como transparente */
 }
 .field-sign-up input::placeholder {
   color: var(--backgrond-login);
   font-style: italic;
-  font-size: 1rem;
-}
-
-.error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 0.8rem;
 }
 
 .setError {
-
   width: 256px;
   color: #ff2d2d;
 }
