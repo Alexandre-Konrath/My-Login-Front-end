@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
     localStorage.setItem("user", JSON.stringify({ email, password }))
 
-    mensagem(`Conta criada com sucesso!!!`, 'green');
+    mensagem(`Conta criada com sucesso! Seja bem vindo(a)`, 'green');
     navidate("/carrinho"); // Redirecionar após ter criado a conta
   }
 
