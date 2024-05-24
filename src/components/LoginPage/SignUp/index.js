@@ -20,7 +20,7 @@ export default function SignUp() {
     e.preventDefault();
 
     if (!validatorName(name)) {
-      setError("O nome deve conter o sobrenome e com letras maiúsculas.");
+      setError("Deve conter Nome e Sobrenome e com letras maiúsculas.");
       return;
     }
 
@@ -34,7 +34,7 @@ export default function SignUp() {
       setError(`
       A senha deve ter no mínimo 6 caracteres.
       Pelo menos 1 número.
-      Pelo menos 1 caractere especial (!, @, #, etc.).`);
+      Pelo menos 1 caractere especialㅤ(!, @, #, etc.).`);
       return;
     }
 
@@ -52,7 +52,7 @@ export default function SignUp() {
       await signUp(name, email, password);
     } catch (error) {
       console.log('Erro ao criar conta:', error);
-      setError("Este email já existe em nosso banco de dados.");
+      setError("Este email já existe no nosso sistema");
     }
   }
 
